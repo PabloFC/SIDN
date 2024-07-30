@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textBorder {
+  -webkit-text-stroke: 1px #ff8882;
+  color: transparent;
+  margin: -40px;
+}
+.textBorderMobile {
+  -webkit-text-stroke: 1px #ff8882;
+  color: transparent;
+  margin: -20px;
+}
+
+.textBorderMain {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  margin: -30px;
+}
+.textBorderMobileMain {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  margin: -20px;
+}
+.gradient {
+  background: linear-gradient(to bottom, #ff8882, #ffc2b4);
+}
+
+.customButton {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  padding: 2px 24px;
+  background-color: #ff8882;
+  border-color: #ff8882;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 35px;
+}
+
+#loadMoreBtn {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  padding: 2px 24px;
+  background-color: white;
+  border-color: white;
+  color: #ff8882;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 35px;
+}

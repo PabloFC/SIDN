@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="PabloFC" />
+    <title>SIDN</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <!-- HEADER -->
+      <header class="bg-bgHeader">
+        <div class="flex justify-center p-4">
+          <img src="assets/img/header/logo.png" alt="" />
+        </div>
+
+        <div class="pt-24 flex flex-row">
+          <div class="flex-col lg:basis-6/12">
+            <h1 class="text-5xl xl:text-8xl text-center text-white font-bold">
+              Buy poison.
+            </h1>
+            <h1
+              class="text-5xl xl:text-8xl text-center text-white font-bold textBorderMobile xl:textBorder"
+            >
+              Trust us.
+            </h1>
+            <p
+              class="text-xl pl-8 py-12 xl:text-left text-white xl:pr-52 xl:py-12 xl:pl-20 2xl:pl-56"
+            >
+              Your children are safe, why would a company lie to you? We are
+              your friends pal. Buy poison today and we grant you total
+              transparency and full refunds* if you are not satisfied with our
+              service. We care about you ❤
+            </p>
+            <div class="flex justify-center xl:justify-start xl:pl-20 2xl:pl-56 2xl:pl:44 ">
+              <button
+                class="bg-neutral-300 hover:bg-neutral-50 w-[256px] h-[62px]"
+              >
+                <span class="text-bgHeader font-bold">DRINK NOW!</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:basis-6/12">
+            <img
+              class="hidden xl:block"
+              src="./assets/img/header/poisonBottle.png"
+              alt="poisonBottle"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col xl:flex-row items-center py-4 pt-12 xl:pt-2">
+          <div class="basis-6/12 flex justify-start xl:pl-20 2xl:pl-56 cursor-pointer">
+            <img src="./assets/img/header/Baja.png" alt="goDown" />
+          </div>
+          <div class="basis-6/12 flex justify-center py-4">
+            <p class="px-4 xl:px-28 text-white">
+              *We keep the right to deny any refunds on our own terms. Total
+              responsability is up to the final user buying poison.
+            </p>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- SECTION  -->
+
+    <section class="bg-white">
+      <div class="flex items-center xl:pl-40 pt-28">
+        <div class="relative">
+          <img src="assets/img/section/Rayitas.png" alt="Imagen de Fondo" />
+
+          <div class="absolute inset-0 flex items-start overlay">
+            <p class="text-bgHeader text-2xl font-bold ml-4">03 - 05</p>
+          </div>
+          <h2 class="text-5xl xl:text-8xl pl-12 text-bgHeader font-bold -mt-12">
+            Cruelty free
+          </h2>
+          <h2
+            class="text-5xl xl:text-7xl pl-12 text-white font-bold textBorderMobile xl:textBorder !ml-8"
+          >
+            Development
+          </h2>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-bgHeader text-xl font-bold pt-32">
+          Except for the human subjects...
+        </p>
+      </div>
+
+      <div class="flex flex-col xl:flex-row p-4 lg:p-12 2xl:p-20">
+        <div class="xl:basis-6/12 py-12">
+          <h5
+            class="xl:px-32 2xl:px-60 text-bgHeader text-2xl xl:text-3xl font-bold"
+          >
+            Look, a cute puppy
+          </h5>
+          <p class="py-4 xl:px-32 2xl:px-60 text-bgHeader">
+            Here on POISON we know that cute small animals go viral and get the
+            youth’s attention. Take a good look at the dog here and think
+            carefully if you emphatize with this company. We are so cool and
+            quirky hehe uwu. Go right now to that form and buy the damn poison
+            already. We are running out of ideas to trick you people into buying
+            our product.
+          </p>
+        </div>
+
+
+        <div class="flex justify-center xl:basis-6/12 mb-12 ">
+          <img src="assets/img/section/Dolphin.png" alt="Dolphin image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+
+    <main class="gradient">
+      <div class="flex justify-end items-center xl:pr-40 pt-28">
+        <div class="relative">
+          <img src="assets/img/main/rayitasBlancas.png" alt="Imagen de Fondo" />
+
+          <div class="absolute inset-0 flex justify-end items-start overlay">
+            <p class="text-white text-2xl font-bold mr-4">02 - 05</p>
+          </div>
+          <h2 class="text-end text-5xl xl:text-8xl pl-12 text-white font-bold -mt-12 mr-2">
+            Our
+          </h2>
+          <h2
+            class="text-5xl !-mt-4 xl:!-mt-8 xl:text-7xl text-white font-bold textBorderMain text-end xl:textBorderMobileMain !mr-4"
+          >
+            Flavours
+          </h2>
+        </div>
+      </div>
+
+      <div class="p-20 flex flex-wrap justify-center gap-4" id="cardContainer"></div>
+
+      <div class="flex justify-center py-12">
+          <button class="load-more-btn" id="loadMoreBtn">Load More</button>
+
+          <script type="module">
+            import items from "./data/items.js";
+
+            const cardContainer = document.getElementById("cardContainer");
+            const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+            let itemsToShow = 4; // Number of items to display initially
+            const itemsPerPage = 4; // Number of items to add each time the button is clicked
+
+            // Function to render items
+            const renderItems = (startIndex, endIndex) => {
+              items.slice(startIndex, endIndex).forEach((item) => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                card.innerHTML = `
+              <div class="flex flex-row basis-3/12">
+                <div class="card bg-white rounded-2xl">
+                  <div class="max-w-[280px] max-h-[180px] min-w-[280px] p-4">
+                    <div class="flex flex-row" id="${item.id}">
+                      <div>
+                        <img src="${item.image}" alt="${item.title}" />
+                      </div>
+                      <div>
+                        <p class="uppercase pl-4 font-bold">${item.title}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="py-1">${item.description}</p>
+                    </div>
+                    <div class="flex justify-end ">
+                      <a class="customButton " href="#">${item.details}</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+        `;
+
+            cardContainer.appendChild(card);
+          });
+        };
+
+        // Initial rendering
+        renderItems(0, itemsToShow);
+
+        // Load more items on button click
+        loadMoreBtn.addEventListener("click", () => {
+          const remainingItems = items.length - itemsToShow;
+          const itemsToRender = Math.min(remainingItems, itemsPerPage);
+          renderItems(itemsToShow, itemsToShow + itemsToRender);
+          itemsToShow += itemsToRender;
+
+          // Hide button if all items are loaded
+          if (itemsToShow >= items.length) {
+            loadMoreBtn.style.display = "none";
+          }
+        });
+      </script>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-bgHeader py-12">
+      <div class="flex flex-row items-center">
+        <div
+          class="basis-7/12 flex justify-center xl:justify-normal xl:px-36 xl:border-r-2 xl:border-white"
+        >
+          <img src="./assets/img/header/logo.png" alt="logo" />
+        </div>
+
+        <div class="basis-5/12">
+          <p class="text-white text-center">Legal notice | Legal information</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
